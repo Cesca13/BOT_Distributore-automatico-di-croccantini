@@ -12,11 +12,9 @@ int pos = 0;
 String data;
 char c;
 
-
 const int led = 13;
 const int pulsante = 7;
 int val = 0;
-
 
 void setup() {
   //Impostazione di bound rate
