@@ -29,11 +29,8 @@ void setup() {
   servo.attach(9);
 
   delay(10);
-
   Serial.println("ARDUINO connesso");
-
-  delay(2000);
-  
+  delay(2000);  
 }
 
 //Funzione attivazione servo
@@ -52,8 +49,6 @@ void servo_on(){
   digitalWrite(led, LOW);
 }
 
-
-
 void loop() {
   //Controllo di un nuovo messaggio dall'Esp32-Cam
   //Memorizzo la stringa/comando e a seconda di esso, attivo l'erogazione
@@ -71,8 +66,7 @@ void loop() {
     servo_on();
     delay(200);
   }  
- 
-  
+
   if (data.length()>0) {
     Serial.println(data);
     //Con il comando /confermo_eroga_ORA parte l'erogazione
